@@ -1,0 +1,90 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Андрей\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  F:\Projects\react-native-paper-autocomplete\storybook\node_modules\.bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\Андрей\AppData\Local\Microsoft\WindowsApps;C:\Users\Андрей\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Андрей\AppData\Local\atom\bin;C:\Program Files\apache-maven-3.6.1\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Users\Андрей\AppData\Local\Microsoft\WindowsApps;C:\Program Files\heroku\bin;C:\Users\Андрей\AppData\Roaming\npm;
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/jsc-android/-/jsc-android-245459.0.0.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\Андрей\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141289:19)
+      at Object.onceWrapper (events.js:421:28)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:784:9)
+      at Object.onceWrapper (events.js:421:28)
+      at TLSSocket.emit (events.js:327:22)
+      at TLSSocket.Socket._onTimeout (net.js:483:8)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject",
+      "test": "jest --watchAll",
+      "storybook": "start-storybook -p 7007",
+      "build-storybook": "build-storybook"
+    },
+    "jest": {
+      "preset": "jest-expo"
+    },
+    "dependencies": {
+      "@expo/vector-icons": "^12.0.0",
+      "expo": "~40.0.0",
+      "react": "16.13.1",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+      "react-native-gesture-handler": "~1.8.0",
+      "react-native-paper": "^4.7.2",
+      "react-native-safe-area-context": "3.1.9",
+      "react-native-screens": "~2.15.0",
+      "@telenko/react-native-paper-autocomplete": "file:../"
+    },
+    "devDependencies": {
+      "react-dom": "16.13.1",
+      "react-native-web": "~0.13.12",
+      "expo-asset": "~8.2.1",
+      "expo-constants": "~9.3.0",
+      "expo-font": "~8.4.0",
+      "expo-linking": "~2.0.0",
+      "expo-splash-screen": "~0.8.0",
+      "expo-status-bar": "~1.0.3",
+      "expo-web-browser": "~8.6.0",
+      "@react-native-community/masked-view": "0.1.10",
+      "@react-navigation/bottom-tabs": "5.11.2",
+      "@react-navigation/native": "~5.8.10",
+      "@react-navigation/stack": "~5.12.8",
+      "@babel/core": "^7.9.0",
+      "@storybook/addon-actions": "^5.3.21",
+      "@storybook/addon-knobs": "^5.3.21",
+      "@storybook/addon-links": "^5.3.21",
+      "@storybook/addon-ondevice-actions": "^5.3.23",
+      "@storybook/addon-ondevice-knobs": "^5.3.25",
+      "@storybook/react-native": "^5.3.25",
+      "@storybook/react-native-server": "^5.3.23",
+      "@types/react": "~16.9.35",
+      "@types/react-native": "~0.63.2",
+      "babel-loader": "^8.2.2",
+      "jest-expo": "~40.0.0",
+      "typescript": "~4.0.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
