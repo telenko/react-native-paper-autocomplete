@@ -2,7 +2,9 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   noItems: {
-    paddingHorizontal: 10,
+    flex: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 20
   },
   menu: {
     marginTop: 65,
@@ -10,8 +12,7 @@ export default StyleSheet.create({
   divider: {
     marginLeft: 16,
   },
-  flatList: {
-  },
+  flatList: {},
   icon: {
     position: "absolute",
     right: 0,

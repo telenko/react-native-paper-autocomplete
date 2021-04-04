@@ -8,7 +8,7 @@ import React, {
   useImperativeHandle,
   useRef
 } from "react";
-import { FlatList, TouchableOpacity, View } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 import {
   Menu,
   Divider,
@@ -27,13 +27,13 @@ type FlatDropdownProps = {
 
 const MENU_DEFAULT_OFFSET = 65;
 const ItemSeparatorComponent = () => <Divider style={styles.divider} />;
-const ListEmptyComponent = () => <Text style={styles.noItems}>No items</Text>;
 
 const FlatDropdown: React.FC<FlatDropdownProps> = forwardRef(({
   inputValue,
   options,
   renderOption,
-  renderNoItems = ListEmptyComponent,
+  noItemsLabel = "No items",
+  renderNoItems = () => <Text style={styles.noItems}>{noItemsLabel}</Text>,
   renderHost,
   onPress,
   onChangeText,

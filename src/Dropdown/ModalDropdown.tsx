@@ -24,7 +24,6 @@ import type { TextInputProps } from "react-native-paper/lib/typescript/component
 import TextActionsInput from "../TextActionsInput/TextActionsInput";
 
 const ItemSeparatorComponent = () => <Divider style={styles.divider} />;
-const ListEmptyComponent = () => <Text style={styles.noItems}>No items</Text>;
 
 type ModalDropdownProps = {
   renderSearchInput?: (
@@ -38,7 +37,12 @@ const ModalDropdown: React.FC<ModalDropdownProps> = forwardRef(
       inputValue,
       options,
       renderOption,
-      renderNoItems = ListEmptyComponent,
+      noItemsLabel = "No items",
+      renderNoItems = () => (
+        <View style={styles.noItems}>
+          <Text>{noItemsLabel}</Text>
+        </View>
+      ),
       renderSearchInput = (props) => <TextInput {...props} />,
       renderHost,
       onPress,

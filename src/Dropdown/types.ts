@@ -14,6 +14,7 @@ export type DropdownProps = Omit<TextInputProps, "value" | "theme"> & {
   }) => React.ReactElement;
   renderHost?: (props: Omit<TextInputProps, "theme">) => React.ReactElement;
   renderNoItems?: () => React.ReactElement;
+  noItemsLabel?: string;
   onPress?: () => void;
   keyExtractor?: (o: OptionProp) => string;
   openOnMount?: boolean;
