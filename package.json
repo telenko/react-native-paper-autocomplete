@@ -1,6 +1,6 @@
 {
   "name": "@telenko/react-native-paper-autocomplete",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Customizable components to organize autocomplete functionality based on react-native-paper components",
   "main": "index.ts",
   "repository": {

@@ -7,13 +7,13 @@ import {
   HelperText,
   IconButton,
   Chip,
+  TextInput
 } from "react-native-paper";
 import React from "react";
 import {
   Autocomplete,
   FlatDropdown,
   ModalDropdown,
-  TextActionsInput,
 } from "@telenko/react-native-paper-autocomplete";
 import CenterView from "../CenterView";
 import InputContainer from "../common/InputContainer";
@@ -223,9 +223,9 @@ storiesOf("Autocomplete [multiple]", module)
               <ModalDropdown
                 {...props}
                 renderSearchInput={(props) => (
-                  <TextActionsInput
+                  <TextInput
                     {...props}
-                    leftActions={[<IconButton icon="arrow-down" size={20} />]}
+                    left={<TextInput.Icon name="arrow-down" size={20} />}
                   />
                 )}
               />

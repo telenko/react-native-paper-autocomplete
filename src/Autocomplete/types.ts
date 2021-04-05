@@ -32,7 +32,9 @@ export type SingleAutocompleteProps = CommonAutocompleteProps & {
   onChange: (v: string) => void;
 };
 
-export type AutocompleteProps = MultiAutocompleteProps | SingleAutocompleteProps;
+export type AutocompleteProps =
+  | MultiAutocompleteProps
+  | SingleAutocompleteProps;
 
 export type OptionProps = {
   selected: boolean;

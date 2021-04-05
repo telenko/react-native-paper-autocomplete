@@ -10,10 +10,4 @@ export default StyleSheet.create({
   flatList: {
     maxHeight: 300,
   },
-  icon: {
-    position: "absolute",
-    right: 0,
-    top: 0,
-    margin: 10,
-  },
 });

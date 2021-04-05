@@ -1,6 +1,7 @@
 # General description
 
 Library is a set of easy to use, customizable components (based on [react-native-paper](https://reactnativepaper.com/)) which can help with building autocomplete/dropdown components.
+
 ![default mode](https://media.giphy.com/media/dX1enKz3tW8CjY8BjU/giphy.gif)
 
 # Getting started
@@ -18,7 +19,6 @@ import {
   Autocomplete,
   FlatDropdown,
   ModalDropdown,
-  TextActionsInput,
 } from "@telenko/react-native-paper-autocomplete";
 ```
 
@@ -99,7 +99,7 @@ const SomeForm: React.FC = () => {
 
    - **Type**: (v: string) => void _(single mode)_ | (v: string[]) => void _(multiple mode)_
    - **Required**: true
-   - **Default**: "" _(single mode)_ | [] _(multiple mode)_
+   - **Default**: -
    - **Description**: Sets value of autocomplete
 
    ### renderHelper
@@ -120,7 +120,7 @@ const SomeForm: React.FC = () => {
 
    - **Type**: ({ value, label, selected, onSelect }, optionItem) => React.ReactElement
    - **Required**: false
-   - **Default**: "" _uses inner widget_
+   - **Default**: _uses inner widget_
    - **Description**: Renders single option inside dropdown
 
    ### filterOptions
@@ -138,6 +138,7 @@ const SomeForm: React.FC = () => {
    - **Description**: Gets option view text from option item
 
    ### [...Inherits all other common dropdown props](#Dropdown)
+
    ## Multiple mode specific props
 
    ### renderSelectedItem
@@ -181,7 +182,7 @@ const SomeForm: React.FC = () => {
 
    - **Type**: (props: [TextInputProps](https://callstack.github.io/react-native-paper/text-input.html)) => React.ReactElement
    - **Required**: false
-   - **Default**: _uses TextActionsInput of @telenko/react-native-paper-autocomplete_
+   - **Default**: _uses TextInput of react-native-paper_
    - **Description**: Renders main trigger element
 
    ### renderNoItems
@@ -210,7 +211,7 @@ const SomeForm: React.FC = () => {
    - **Type**: (item: any) => string
    - **Required**: false
    - **Default**: item => item.value
-   - **Description**: Uses to generate uniq key for each option
+   - **Description**: Used to generate uniq key for each option
 
    ### openOnMount
 
@@ -238,7 +239,7 @@ const SomeForm: React.FC = () => {
 
    - **Type**: (props: [TextInputProps](https://callstack.github.io/react-native-paper/text-input.html)) => React.ReactElement
    - **Required**: false
-   - **Default**: _uses TextActionsInput of @telenko/react-native-paper-autocomplete_
+   - **Default**: _uses TextInput of react-native-paper_
    - **Description**: Renders search input inside modal (by default looks same as trigger/host input)
 
 # Showcase
@@ -398,9 +399,9 @@ const SomeForm: React.FC = () => {
     <ModalDropdown
       {...props}
       renderSearchInput={(props) => (
-        <TextActionsInput
+        <TextInput
           {...props}
-          leftActions={[<IconButton icon="arrow-down" size={20} />]}
+          left={<TextInput.Icon name="arrow-down" size={20} />}
         />
       )}
     />
@@ -513,21 +514,7 @@ const SomeForm: React.FC = () => {
 
 ![custom host](https://media.giphy.com/media/BFz2x25motsoj1YvcX/giphy.gif)
 
-10. InputActions Component
-
-```tsx
-<TextActionsInput
-  style={{ width: 300 }}
-  value={value}
-  onChangeText={setValue}
-  leftActions={[<IconButton icon="close" size={20} />]}
-  rightActions={[<IconButton icon="arrow-expand" size={20} />]}
-/>
-```
-
-![input actions](https://media.giphy.com/media/4fc4ETdwjk1mPUSKO1/giphy.gif)
-
-11. Plain Dropdown Component (Modal)
+10. Plain Dropdown Component (Modal)
 
 ```tsx
 <ModalDropdown
@@ -549,7 +536,7 @@ const SomeForm: React.FC = () => {
 
 ![modal dropdown](https://media.giphy.com/media/h9Qd8io8mOPmUV2jr4/giphy.gif)
 
-12. Plain Dropdown Component (Flat)
+11. Plain Dropdown Component (Flat)
 
 ```tsx
 <FlatDropdown
@@ -572,7 +559,7 @@ const SomeForm: React.FC = () => {
 
 ![flat dropdown](https://media.giphy.com/media/1NSQcfrQF1r3SBHQgP/giphy.gif)
 
-13. Writing Autocomplete which works in mixed mode (flat+modal)
+12. Writing Autocomplete which works in mixed mode (flat+modal)
 
 ```tsx
 import {

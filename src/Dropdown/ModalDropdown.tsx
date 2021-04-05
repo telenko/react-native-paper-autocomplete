@@ -2,26 +2,17 @@ import React, {
   forwardRef,
   memo,
   useCallback,
-  useEffect,
   useImperativeHandle,
   useLayoutEffect,
   useRef,
   useState,
 } from "react";
 import { FlatList, TouchableOpacity, View, Modal } from "react-native";
-import {
-  TextInput,
-  List,
-  Divider,
-  Text,
-  useTheme,
-  IconButton,
-} from "react-native-paper";
-import { DropdownProps } from "./types";
+import { TextInput, Divider, Text, useTheme } from "react-native-paper";
+import type { DropdownProps } from "./types";
 import memoCompare from "./memoCompare";
 import styles from "./modalStyles";
 import type { TextInputProps } from "react-native-paper/lib/typescript/components/TextInput/TextInput";
-import TextActionsInput from "../TextActionsInput/TextActionsInput";
 
 const ItemSeparatorComponent = () => <Divider style={styles.divider} />;
 
@@ -43,32 +34,33 @@ const ModalDropdown: React.FC<ModalDropdownProps> = forwardRef(
           <Text>{noItemsLabel}</Text>
         </View>
       ),
-      renderSearchInput = (props) => <TextInput {...props} />,
+      renderSearchInput = (props: Omit<TextInputProps, "theme">) => (
+        <TextInput {...props} />
+      ),
       renderHost,
       onPress,
       onChangeText,
       onOpen,
       onClose,
       openOnMount = false,
-      keyExtractor = (option) => option.value,
+      keyExtractor = (option: any) => option.value,
       style,
       ...props
     },
     ref
   ) => {
     const { colors } = useTheme();
-    //TODO Actions should be clickable while focus on input!
     if (!renderHost) {
       renderHost = (props) => (
-        <TextActionsInput
-          rightActions={[
-            <IconButton
-              icon="arrow-down"
+        <TextInput
+          right={
+            <TextInput.Icon
+              name="arrow-down"
               color={colors.primary}
               onPress={toggleMenu}
               size={20}
-            />,
-          ]}
+            />
+          }
           {...props}
         />
       );
@@ -107,7 +99,7 @@ const ModalDropdown: React.FC<ModalDropdownProps> = forwardRef(
       openMenu,
       closeMenu,
       toggleMenu,
-      ...inputRef.current,
+      ...(inputRef.current as any),
     }));
     return (
       <>
