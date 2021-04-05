@@ -23,7 +23,6 @@ storiesOf("Autocomplete [single]", module)
         defaultValue={""}
         renderInput={(value: string, setValue: (id: string) => void) => (
           <Autocomplete
-            multiple={false}
             menuOffset={40}
             onOpen={action("open-menu")}
             onClose={action("close-menu")}
@@ -51,7 +50,6 @@ storiesOf("Autocomplete [single]", module)
         defaultValue={""}
         renderInput={(value: string, setValue: (id: string) => void) => (
           <Autocomplete
-            multiple={false}
             menuOffset={15}
             renderHost={() => (
               <Button mode="contained">

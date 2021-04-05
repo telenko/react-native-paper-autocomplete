@@ -17,9 +17,9 @@ import type { AutocompleteProps } from "./types";
 
 const Autocomplete: React.FC<AutocompleteProps> = (props) =>
   props.multiple === true ? (
-    <MultiAutocomplete {...props} />
+    <MultiAutocomplete multiple {...props} />
   ) : (
-    <SingleAutocomplete {...props} />
+    <SingleAutocomplete multiple={false} {...props} />
   );
 
 export default Autocomplete;

@@ -6,7 +6,7 @@ import { TextActionsInput } from "@telenko/react-native-paper-autocomplete";
 import CenterView from "../CenterView";
 import InputContainer from "../common/InputContainer";
 
-storiesOf("TextActionsInpur", module)
+storiesOf("TextActionsInput", module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .addDecorator((getStory) => (
     <Provider theme={DefaultTheme}>{getStory()}</Provider>

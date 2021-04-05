@@ -5,7 +5,7 @@ type CommonAutocompleteProps = Omit<
   DropdownProps,
   "onChange" | "inputValue" | "renderOption"
 > & {
-  multiple: boolean;
+  multiple?: boolean;
   renderHelper?: null | (() => React.ReactElement);
   renderDropdown?: (props: DropdownProps) => React.ReactElement;
   renderOption?: (props: OptionProps, item: any) => React.ReactElement;
@@ -26,7 +26,7 @@ export type MultiAutocompleteProps = CommonAutocompleteProps & {
 };
 
 export type SingleAutocompleteProps = CommonAutocompleteProps & {
-  multiple: false;
+  multiple?: false;
   value?: string;
   menuOffset?: number;
   onChange: (v: string) => void;

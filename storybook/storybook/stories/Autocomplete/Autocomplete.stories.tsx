@@ -252,8 +252,8 @@ storiesOf("Autocomplete [multiple]", module)
             multiple
             onOpen={action("open-menu")}
             onClose={action("close-menu")}
-            renderSelectedItem={({ label, onDelete }) => (
-              <Chip icon="folder" mode="outlined" onClose={onDelete}>{label}</Chip>
+            renderSelectedItem={({ label, value, onDelete }) => (
+              <Chip key={value} icon="folder" mode="outlined" onClose={onDelete}>{label}</Chip>
             )}
             value={value}
             onChange={setValue}
