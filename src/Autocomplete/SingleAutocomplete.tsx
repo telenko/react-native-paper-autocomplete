@@ -63,7 +63,7 @@ const SingleAutocomplete: React.FC<SingleAutocompleteProps> = ({
           if (!isSelected) {
             onChange(keyExtractor(item));
             setInputV(labelExtractor(item));
-            dropdownRef.current?.closeMenu();
+            (dropdownRef.current as any)?.closeMenu();
           }
         },
       };
@@ -83,7 +83,7 @@ const SingleAutocomplete: React.FC<SingleAutocompleteProps> = ({
         onChangeText: setInputValueCb,
         onFocus: () => {
           setInputV("");
-          dropdownRef.current?.openMenu();
+          (dropdownRef.current as any)?.openMenu();
         },
         onBlur: () => {
           const selectedItem =
