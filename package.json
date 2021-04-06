@@ -1,6 +1,6 @@
 {
   "name": "@telenko/react-native-paper-autocomplete",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Customizable components to organize autocomplete functionality based on react-native-paper components",
   "main": "index.ts",
   "repository": {
@@ -19,28 +19,22 @@
     "url": "https://github.com/telenko/react-native-paper-autocomplete/issues"
   },
   "homepage": "https://github.com/telenko/react-native-paper-autocomplete#readme",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject",
-    "test": "jest --watchAll",
-    "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
-  },
   "jest": {
     "preset": "jest-expo"
   },
-  "dependencies": {
-    "@expo/vector-icons": "^12.0.4",
-    "react": "^16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
-    "react-native-paper": "^4.7.2"
+  "peerDependencies": {
+    "@expo/vector-icons": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-paper": "*"
   },
   "devDependencies": {
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
-    "typescript": "~4.0.0"
+    "typescript": "~4.0.0",
+    "@expo/vector-icons": "^12.0.4",
+    "react": "^16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native-paper": "^4.7.2"
   }
 }

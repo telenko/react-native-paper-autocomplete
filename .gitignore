@@ -1,5 +1,6 @@
 node_modules/**/*
 storybook/node_modules/**/*
+storybook/.expo/**/*
 .expo/*
 npm-debug.*
 *.jks
